@@ -19,9 +19,17 @@
 
 <body>
 
-  <div id="JOSH" draggable="true"></div>
-  <div id="JOSH-2" draggable="true"></div>
+  <div id="_container_">
+    <div id="JOSH" draggable="true"></div>
+    <div id="JOSH-2" draggable="true"></div>
+  </div>
+
   <style>
+    #_container_ {
+      height: 100%;
+      width: 100%;
+    }
+    
     #JOSH {
       height: 100px;
       width: 100px;
@@ -32,6 +40,10 @@
       height: 500px;
       width: 500px;
       background: blue;
+    }
+
+    ._droppable_ {
+      background: grey;
     }
   </style>
   <script src="/js/event-10_drag.js"></script>

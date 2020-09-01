@@ -36,6 +36,20 @@ josh.addEventListener('dragstart', (event) => {
 // Mark as drop zone:
 const josh_2 = document.getElementById('JOSH-2');
 josh_2.addEventListener('dragenter', event => {
-    print('inside josh_2 event listener');    
+    print('inside josh_2 event listener');
+
+    if (event.dataTransfer.types[0] === 'text/plain') {
+        event.preventDefault();
+        print('event.dataTransfer is type: text/plain');
+    }
+
+    josh_2.parentElement.classList.add('_droppable_');
 });
+
+josh_2.addEventListener('dragleave', event => {
+
+    // Check to make sure we actually left a non-child element
+    josh_2.parentElement.classList.remove('_droppable_');
+});
+
 print(josh_2);
