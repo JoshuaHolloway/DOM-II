@@ -1,9 +1,0 @@
-// 1. mouseover
-// 2. keydown
-// 3. wheel
-// 4. load
-// 5. focus
-// 6. resize
-// 7. scroll
-// 8. select
-// 9. dblclick
