@@ -1,0 +1,29 @@
+/* Adapted from: https://youtu.be/C22hQKE_32c */
+
+:root {
+    --box-size: 50px;
+    --box-border: 5px;
+    --box-size-inner: calc(var(--box-size) - 2*var(--box-border));
+}
+
+#event-10 {
+    display: flex;
+}
+
+.fill {
+    background: deeppink;
+    height: var(--box-size-inner);
+    width: var(--box-size-inner);
+    cursor: pointer;
+
+    display: grid;
+    place-items: center;
+}
+
+
+.empty {
+    height: var(--box-size);
+    width: var(--box-size);
+    border: solid 5px darkorchid;
+    background: white;
+}

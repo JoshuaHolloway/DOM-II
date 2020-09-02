@@ -1,35 +1,81 @@
-<!doctype html>
-
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
 
-  <title>Fun Bus Travel Agency</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/mvp-2.css">
+    <link rel="stylesheet" href="./css/_gsap_.css">
+    <link rel="stylesheet" href="./css/event-10.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js" defer></script>
 
-  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto" rel="stylesheet">
-  <link href="less/index.less" rel="stylesheet">
+    <script type="module" src="./js/event-01.js" defer></script>
 
-  <!-- If we omit the "defer" attribute, `index.js` will load and execute
-  _before_ the rest of the HTML is parsed by the browser, which would be bad because
-  the code inside `index.js` expects the page to be fully parsed (and the DOM fully built) -->
-  <script defer src="js/index.js"></script>
-  <!-- We will often see script tags placed right before the closing body tag,
-  it's a way of getting around the problem above without the need for "defer" -->
+    <script type="module" src="./js/event-02.js" defer></script>
+
+    <!-- <script type="module" src="./js/event-03.js" defer></script> -->
+
+    <!-- <script type="module" src="./js/event-04.js" defer></script> -->
+
+    <script type="module" src="./js/event-05.js" defer></script>
+
+    <script type="module" src="./js/event-06.js" defer></script>
+
+    <script type="module" src="./js/event-07.js" defer></script>
+
+    <script type="module" src="./js/event-08.js" defer></script>
+
+    <script type="module" src="./js/event-09.js" defer></script>
+
+    <script type="module" src="./js/event-10.js" defer></script> 
+ 
+    <script type="module" src="./js/mvp-2.js" defer></script>
+
+    <script type="module" src="./js/mvp-3.js" defer></script>
+
+    <script type="module" src="./js/_gsap_.js" defer></script>
 </head>
 
 <body>
 
+
+
+    <section id="event-10">
+        <!-- Adapted from: https://youtu.be/C22hQKE_32c -->
+        <div class="empty">
+            <div class="fill" draggable="true">Drag me</div>
+        </div>
+
+        <div class="empty">
+        </div>
+
+    </section>
+
   <header class="main-navigation">
+     <img class="logo" src="logo.svg" alt="GreenSock superhero" >
+    
     <div class="container nav-container">
       <h1 class="logo-heading">Fun Bus</h1>
       <nav class="nav">
-        <a class="nav-link" href="#">Home</a>
-        <a class="nav-link" href="#">About Us</a>
-        <a class="nav-link" href="#">Blog</a>
-        <a class="nav-link" href="#">Contact</a>
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/about">About Us</a>
+        <a class="nav-link" href="/blog">Blog</a>
+        <a class="nav-link" href="/contact">Contact</a>
       </nav>
     </div>
   </header>
+
+ 
+
+    <!-- mvp-2 (prevent event propagation) -->
+    <div id="outer-div">
+        <div id="inner-div">
+            <h1>Click Me</h1>
+        </div>
+    </div>
+
+    <div id="josh-1">
+      <h2>Double Click Me</h2>
+    </div>
+
      
   <div class="container home">
     <header class="intro">
@@ -81,11 +127,28 @@
         <div class="btn">Sign Me Up!</div>
       </div>
     </section>
+
+    <div class="_container_">
+
+      <!-- Select Event (example from MDN) -->
+      <input id="_input_" value="Try selecting this text">
+      <p id="log"></p>
+
+      <h2>Login:</h2>
+      <!-- Example from MDN for focus and blur events (event-05) -->
+      <form id="form">
+          <input type="text" placeholder="text input">
+          <input type="password" placeholder="password">
+      </form>
+    </div>    
   </div><!-- container -->
 
   <footer class="footer">
     <p>Copyright Fun Bus 2020</p>
   </footer>
 
+
+
 </body>
+
 </html>

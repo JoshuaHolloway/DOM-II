@@ -1,0 +1,20 @@
+#outer-div {
+    height: 500px;
+    width: 500px;
+    background: deeppink;
+
+    display: grid;
+    place-items: center;
+}
+#inner-div {
+    height: 300px;
+    width: 300px;
+    background: deepskyblue;
+
+    display: grid;
+    place-items: center;
+}
+
+._purple_ {
+    background: darkorchid !important;
+}
