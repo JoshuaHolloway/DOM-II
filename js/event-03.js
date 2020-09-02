@@ -1,5 +1,5 @@
 import {print, qs} from './~.js';
-print('hi from event-03_wheel.js');
+// print('hi from event-03_wheel.js');
 
 
 const body = qs('body');

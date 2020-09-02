@@ -1,15 +1,24 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event
-import {print, qs} from './~.js';
+import {print, qs, qsAll} from './~.js';
 print('hi from event-05_focus.js');
 
 
-// Example from MDN:
-const password = document.querySelector('input[type="password"]');
+// Modified from MDN example:
 
-password.addEventListener('focus', (event) => {
-  event.target.style.background = 'pink';    
-});
+// const password = document.querySelector('input[type="password"]');
+const inputs = Array.from(qsAll('input'));
+print(inputs);
 
-password.addEventListener('blur', (event) => {
-  event.target.style.background = '';    
+inputs.forEach((input) => {
+
+  input.addEventListener('focus', (event) => {
+    event.target.style.background = 'hotpink'; 
+    event.target.style.color = 'white';
+  });
+
+  input.addEventListener('blur', (event) => {
+    event.target.style.background = '';
+    event.target.style.color = '';
+  });
+
 });
