@@ -1,6 +1,6 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event
 import {print, qs, qsAll} from './~.js';
-print('hi from event-05_focus.js');
+// print('hi from event-05_focus.js');
 
 const inputs = Array.from(qsAll('input'));
 print(inputs);
