@@ -1,0 +1,8 @@
+.box {
+    height: 100px;
+    width: 100px;
+}
+
+#A { background: deeppink; }
+#B { background: deepskyblue; }
+#C { background: darkorchid; }
