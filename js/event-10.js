@@ -1,5 +1,7 @@
-// Example from MDN:
-// https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API
+// Adapted from: https://youtu.be/C22hQKE_32c
+
+
+// Description from MDN:
 
 // Step 1: Identify what is draggable
 //  -Making an element draggable requires adding the draggable attribute and the ondragstart global event handler:
@@ -36,3 +38,47 @@
 
 
 // Step 6: Drag end
+
+const fill = document.querySelector('.fill');
+const empties = document.querySelectorAll('.empty');
+
+// Fill listeners
+fill.addEventListener('dragstart', dragStart);
+fill.addEventListener('dragend', dragEnd);
+
+// Loop through empty boxes and add listeners
+for (const empty of empties) {
+  empty.addEventListener('dragover', dragOver);
+  empty.addEventListener('dragenter', dragEnter);
+  empty.addEventListener('dragleave', dragLeave);
+  empty.addEventListener('drop', dragDrop);
+}
+
+// Drag Functions
+
+function dragStart() {
+  this.className += ' hold';
+  setTimeout(() => (this.className = 'invisible'), 0);
+}
+
+function dragEnd() {
+  this.className = 'fill';
+}
+
+function dragOver(e) {
+  e.preventDefault();
+}
+
+function dragEnter(e) {
+  e.preventDefault();
+  this.className += ' hovered';
+}
+
+function dragLeave() {
+  this.className = 'empty';
+}
+
+function dragDrop() {
+  this.className = 'empty';
+  this.append(fill);
+}
