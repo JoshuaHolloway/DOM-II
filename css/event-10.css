@@ -15,6 +15,9 @@
     height: var(--box-size-inner);
     width: var(--box-size-inner);
     cursor: pointer;
+
+    display: grid;
+    place-items: center;
 }
 
 
