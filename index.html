@@ -16,11 +16,11 @@
 
     <script type="module" src="./js/event-05.js" defer></script>
 
-    <!-- <script type="module" src="./js/event-06.js" defer></script> -->
+    <script type="module" src="./js/event-06.js" defer></script>
 
-    <!-- <script type="module" src="./js/event-07.js" defer></script> -->
+    <script type="module" src="./js/event-07.js" defer></script>
 
-    <!-- <script type="module" src="./js/event-08.js" defer></script> -->
+    <script type="module" src="./js/event-08.js" defer></script>
 
     <!-- <script type="module" src="./js/event-09.js" defer></script> -->
 
@@ -28,12 +28,26 @@
  
     <!-- <script type="module" src="./js/mvp-2.js" defer></script> -->
 
-    <!-- <script type="module" src="./js/_gsap_.js" defer></script> -->
+    <script type="module" src="./js/_gsap_.js" defer></script>
 </head>
 
 <body>
 
-  <!-- <img class="logo" src="logo.svg" alt="GreenSock superhero" > -->
+  <header class="main-navigation">
+     <img class="logo" src="logo.svg" alt="GreenSock superhero" >
+    
+    <div class="container nav-container">
+      <h1 class="logo-heading">Fun Bus</h1>
+      <nav class="nav">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/about">About Us</a>
+        <a class="nav-link" href="/blog">Blog</a>
+        <a class="nav-link" href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+ 
 
     <!-- mvp-2 (prevent event propagation) -->
     <div id="outer-div">
@@ -46,9 +60,7 @@
 
 
 
-    <!-- Select Event (example from MDN) -->
-    <input id="_input_" value="Try selecting some text in this element.">
-    <p id="log"></p>
+
 
     <section id="event-10">
         <!-- Adapted from: https://youtu.be/C22hQKE_32c -->
@@ -74,17 +86,6 @@
 
 
 
-  <header class="main-navigation">
-    <div class="container nav-container">
-      <h1 class="logo-heading">Fun Bus</h1>
-      <nav class="nav">
-        <a class="nav-link" href="/">Home</a>
-        <a class="nav-link" href="/about">About Us</a>
-        <a class="nav-link" href="/blog">Blog</a>
-        <a class="nav-link" href="/contact">Contact</a>
-      </nav>
-    </div>
-  </header>
      
   <div class="container home">
     <header class="intro">
@@ -138,6 +139,11 @@
     </section>
 
     <div class="_container_">
+
+    <!-- Select Event (example from MDN) -->
+    <input id="_input_" value="Try selecting this text">
+    <p id="log"></p>
+
       <h2>Login:</h2>
       <!-- Example from MDN for focus and blur events (event-05) -->
       <form id="form">

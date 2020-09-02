@@ -2,10 +2,6 @@
 import {print, qs, qsAll} from './~.js';
 print('hi from event-05_focus.js');
 
-
-// Modified from MDN example:
-
-// const password = document.querySelector('input[type="password"]');
 const inputs = Array.from(qsAll('input'));
 print(inputs);
 
