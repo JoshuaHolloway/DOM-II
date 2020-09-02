@@ -1,27 +1,26 @@
+/* Adapted from: https://youtu.be/C22hQKE_32c */
+
+:root {
+    --box-size: 50px;
+    --box-border: 5px;
+    --box-size-inner: calc(var(--box-size) - 2*var(--box-border));
+}
+
+#event-10 {
+    display: flex;
+}
+
 .fill {
-    background-image: url('https://source.unsplash.com/random/150x150');
-    position: relative;
-    height: 150px;
-    width: 150px;
-    top: 5px;
-    left: 5px;
+    background: deeppink;
+    height: var(--box-size-inner);
+    width: var(--box-size-inner);
     cursor: pointer;
 }
 
-.hold {
-    border: solid 5px #ccc;
-}
 
 .empty {
-    display: inline-block;
-    height: 160px;
-    width: 160px;
-    margin: 10px;
-    border: solid 3px salmon;
+    height: var(--box-size);
+    width: var(--box-size);
+    border: solid 5px darkorchid;
     background: white;
-}
-
-.hovered {
-    background: #f4f4f4;
-    border-style: dashed;
 }
