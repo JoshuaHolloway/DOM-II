@@ -3,5 +3,5 @@ import {print, qs} from './~.js';
 print('hi from event-06_resize.js');
 
 window.addEventListener('resize', (event) => {
-  console.log('resize, yo');
+  alert('You have resized the screen!!!');
 });
