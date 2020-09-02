@@ -1,5 +1,4 @@
-const print = (x) => console.log(x);
-const qs = (x) => document.querySelector(x);
+import {print, qs} from './~.js';
 print('hi from event-04_load.js');
 
 window.addEventListener('load', (event) => {
