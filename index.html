@@ -30,8 +30,8 @@
     <script type="module" src="./js/event-09.js" defer>
     </script>
 
-    <!-- <script type="module" src="./js/event-10.js" defer>
-    </script> -->
+    <script type="module" src="./js/event-10_drag.js" defer>
+    </script>
 
 </head>
 
@@ -44,6 +44,53 @@
         <input type="text" placeholder="text input">
         <input type="password" placeholder="password">
     </form>
+
+
+    <!-- Adapted from: https://youtu.be/C22hQKE_32c -->
+    <div class="empty">
+        <div class="fill" draggable="true"> </div>
+    </div>
+
+    <div class="empty">
+    </div>
+
+    <div class="empty">
+    </div>
+
+    <div class="empty">
+    </div>
+
+    <div class="empty">
+    </div>
+    <style>
+        .fill {
+        background-image: url('https://source.unsplash.com/random/150x150');
+        position: relative;
+        height: 150px;
+        width: 150px;
+        top: 5px;
+        left: 5px;
+        cursor: pointer;
+        }
+
+        .hold {
+        border: solid 5px #ccc;
+        }
+
+        .empty {
+        display: inline-block;
+        height: 160px;
+        width: 160px;
+        margin: 10px;
+        border: solid 3px salmon;
+        background: white;
+        }
+
+        .hovered {
+        background: #f4f4f4;
+        border-style: dashed;
+        }
+    </style>
 
 
 </body>
