@@ -5,8 +5,6 @@ import {print} from './~.js';
 // -The select event fires when some text has been selected.
 print('inside logSelection');
 function logSelection(event) {
-
-
     const log = document.getElementById('log');
     const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
     log.textContent = `You selected: ${selection}`;
