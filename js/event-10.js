@@ -1,6 +1,5 @@
 // Adapted from: https://youtu.be/C22hQKE_32c
 
-
 // Description from MDN:
 
 // Step 1: Identify what is draggable
@@ -39,46 +38,30 @@
 
 // Step 6: Drag end
 
-const fill = document.querySelector('.fill');
-const empties = document.querySelectorAll('.empty');
+// drag_me is the object that can be dragged
+const drag_me = document.querySelector('.fill');
 
-// Fill listeners
-fill.addEventListener('dragstart', dragStart);
-fill.addEventListener('dragend', dragEnd);
+// drop_here is each drop-zone
+const drop_here = document.querySelectorAll('.empty');
 
-// Loop through empty boxes and add listeners
-for (const empty of empties) {
-  empty.addEventListener('dragover', dragOver);
-  empty.addEventListener('dragenter', dragEnter);
-  empty.addEventListener('dragleave', dragLeave);
-  empty.addEventListener('drop', dragDrop);
-}
 
-// Drag Functions
+drag_me.addEventListener('dragstart', () => drag_me.classList.add('hold'));
+drag_me.addEventListener('dragend', () => drag_me.className = 'fill');
 
-function dragStart() {
-  this.className += ' hold';
-  setTimeout(() => (this.className = 'invisible'), 0);
-}
+drop_here.forEach(elem => {
 
-function dragEnd() {
-  this.className = 'fill';
-}
+  elem.addEventListener('dragover', (e) => e.preventDefault());
 
-function dragOver(e) {
-  e.preventDefault();
-}
+  elem.addEventListener('dragenter', (e) => {
+    e.preventDefault();
+    elem.classList.add('hovered')
+  });
 
-function dragEnter(e) {
-  e.preventDefault();
-  this.className += ' hovered';
-}
+  elem.addEventListener('dragleave', () => elem.className = 'empty');
 
-function dragLeave() {
-  this.className = 'empty';
-}
+  elem.addEventListener('drop', () => {
+    elem.className = 'empty';
+    elem.append(drag_me);
+  });
 
-function dragDrop() {
-  this.className = 'empty';
-  this.append(fill);
-}
+});
