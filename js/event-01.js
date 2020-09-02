@@ -1,5 +1,5 @@
 import {print, qs} from './~.js';
-print('event-01.js');
+// print('event-01.js');
 
 const img = qs('img');
 img.addEventListener('mouseover', (event) => {
