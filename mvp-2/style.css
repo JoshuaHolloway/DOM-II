@@ -14,11 +14,7 @@
     display: grid;
     place-items: center;
 }
-#inner-most {
-    height: 100px;
-    width: 100px;
-    background: darkorchid;
 
-    display: grid;
-    place-items: center;
+._purple_ {
+    background: darkorchid !important;
 }
