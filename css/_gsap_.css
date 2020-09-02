@@ -1,8 +1,5 @@
-.box {
-    height: 100px;
-    width: 100px;
-}
+/* https://youtu.be/M4GCT-2kaoo */
 
-#A { background: deeppink; }
-#B { background: deepskyblue; }
-#C { background: darkorchid; }
+.logo {
+    position: absolute;
+}
