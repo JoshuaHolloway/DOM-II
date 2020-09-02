@@ -1,0 +1,1 @@
+// * [ ] Stop the navigation items from refreshing the page by using `preventDefault()`

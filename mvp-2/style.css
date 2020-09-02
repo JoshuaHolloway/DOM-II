@@ -1,0 +1,24 @@
+#outer-div {
+    height: 500px;
+    width: 500px;
+    background: deeppink;
+
+    display: grid;
+    place-items: center;
+}
+#inner-div {
+    height: 300px;
+    width: 300px;
+    background: deepskyblue;
+
+    display: grid;
+    place-items: center;
+}
+#inner-most {
+    height: 100px;
+    width: 100px;
+    background: darkorchid;
+
+    display: grid;
+    place-items: center;
+}
